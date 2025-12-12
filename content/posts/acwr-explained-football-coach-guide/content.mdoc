@@ -1,0 +1,536 @@
+# ACWR in Football: How to Use It Safely and Effectively (Coach’s Guide)
+
+This guide explains **ACWR (Acute:Chronic Workload Ratio) in simple terms**, shows how to calculate it with a **7-day acute** and **21-day chronic** window (the method Fractall uses), and how to apply it **safely** and effectively in football, especially in small and medium clubs.
+
+---
+
+## ACWR Explained: A Simple Definition for Coaches
+
+**ACWR** stands for **Acute:Chronic Workload Ratio**.
+
+At Fractall, we use:
+
+- **Acute workload (7 days)** = total training + match load from the **last 7 days**
+- **Chronic workload (21 days)** = the **average load from the previous 21 days** (the last 3 weeks)
+
+The formula is:
+
+> **ACWR = Acute Workload (7 days) ÷ Chronic Workload (21-day average)**
+
+Think of it like this:
+
+- Acute = **“What has the player done in the last week?”**
+- Chronic = **“What has the player been conditioned to handle over the last three weeks?”**
+
+If the 7-day load is much higher than the 21-day average, ACWR goes up and may indicate **increased risk** or **an aggressive progression** in training load.
+
+**Coach Takeaway:**\
+ACWR compares **this week’s load** with the **player’s 3-week “fitness base”**. It does not predict injuries, but it helps you spot **big jumps** that deserve attention.
+
+---
+
+## Why ACWR Matters in Football
+
+Football is full of variables:
+
+- Fixture congestion and cup runs
+- Players jumping from bench roles to 90-minute starters
+- Travel, school/work, and lifestyle stress
+- Changing tactical demands and positions
+
+Research in team sports has consistently found that **rapid spikes in training and match load** are linked to **greater injury risk**, while well-managed chronic load can be protective. International consensus statements from organisations linked to FIFA and the IOC underline the importance of tracking **load** and **athlete well-being** over time.
+
+ACWR helps you:
+
+- Flag **sudden increases** in load across 7 days compared with the previous 21 days
+- Plan **gradual progressions** in pre-season and in-season
+- Manage **return-to-play** after injury
+- Monitor players taking on **new roles or more minutes**
+
+**Coach Takeaway:**\
+ACWR is a **load management compass**. It tells you whether you’re staying close to what players are conditioned for, or jumping too far, too fast.
+
+---
+
+## How We Calculate ACWR with 7-Day Acute and 21-Day Chronic
+
+To keep things **Accessible**, we’ll use **internal training load** based on **session-RPE**, which any club can implement without GPS.
+
+If you need the basics on RPE and training load, start here:\
+👉 [**RPE Basics for Coaches: How to Use Session-RPE to Monitor Training Load**](/blog/rpe-basics-session-rpe-training-load)
+
+### Step 1 – Define Your Load Metric
+
+We use:
+
+> **Session Load = RPE × Session Duration (minutes)**
+
+Then we sum across sessions to get:
+
+> **Daily Load = Sum of those session loads on that day**
+
+And from there:
+
+- **Acute Load (7 days)** = sum of the **last 7 days** of load
+- **Chronic Load (21 days)** = average of the **previous 21 days** of load
+
+### Step 2 – Collect a Few Weeks of Data
+
+For ACWR to be meaningful, you need a minimum history:
+
+- At least **3 full weeks (21 days)** of consistent data to establish the first chronic value
+- After that, you can calculate ACWR **daily** or **weekly**, using rolling 7-day and 21-day windows
+
+### Step 3 – Calculate the Acute Load (7 Days)
+
+For any given day (or “current week”), sum the last 7 days:
+
+> **Acute Load (7d) = Load(day-6) + … + Load(day-1) + Load(day)**
+
+Example (simplified weekly view):
+
+- Mon: 300 AU
+- Tue: 400 AU
+- Wed: 0 AU (rest)
+- Thu: 450 AU
+- Fri: 250 AU
+- Sat: 0 AU (matchday-1)
+- Sun: 700 AU (match)
+
+> Acute (7 days) = 300 + 400 + 0 + 450 + 250 + 0 + 700 = **2,100 AU**
+
+### Step 4 – Calculate the Chronic Load (21 Days)
+
+Now take the **previous 21 days** before (and including) the current day and compute the **average**:
+
+> **Chronic Load (21d) = (Sum of last 21 days of load) ÷ 21**
+
+To make it simple for coaches, you can think of this as the average of the last **3 “weeks” of load**, but we keep it in days so that ACWR can be updated any day, not only on a fixed weekly cycle.
+
+Example (using weekly totals for illustration):
+
+{% table %}
+- Period
+- Weekly Total (AU)
+---
+- Week −3
+- 1800
+---
+- Week −2
+- 2000
+---
+- Week −1
+- 1900
+---
+- Current 7 days
+- 2100
+{% /table %}
+
+Here, the **chronic load** for the current 7-day period is based on the **previous 21 days**:
+
+> Chronic = (1800 + 2000 + 1900) ÷ 21 days × 7 days (to put it on a weekly-equivalent scale)\
+= (5700 ÷ 21) × 7 ≈ 271 × 7 ≈ **1,897 AU**
+
+You don’t need to do this scaling step if your system works natively in daily values – but in Fractall we do the math in the background so you can read it in **simple weekly-equivalent numbers**.
+
+### Step 5 – Calculate ACWR (7d / 21d)
+
+Using the example:
+
+- Acute (7 days) = 2,100 AU
+- Chronic (21-day average, scaled to weekly equivalent) ≈ 1,897 AU
+
+> **ACWR = 2,100 ÷ 1,897 ≈ 1.11**
+
+Interpretation:
+
+- **≈1.0** → Current 7-day load is very similar to the recent 21-day “fitness base”.
+- **Higher than 1.2–1.3** → You are pushing clearly above recent norms (spike).
+- **Lower than 0.8** → You are well below recent norms (deload, taper, or under-training).
+
+**Coach Takeaway:**\
+With a 7-day acute and 21-day chronic window, ACWR tells you if the **last week is in line with the last three weeks**, which is a practical time frame for football planning.
+
+---
+
+## Football Example: ACWR Across a Match Week (7/21 Model)
+
+Let’s use a typical microcycle for a player who starts the match. We’ll use session-RPE for **football training load**.
+
+### Step 1 – Calculate 7-Day Acute Load
+
+{% table %}
+- Day
+- Type
+- Duration
+- RPE
+- Session Load (AU)
+---
+- Mon
+- MD-4
+- 75 min
+- 6
+- 450
+---
+- Tue
+- MD-3
+- 80 min
+- 7
+- 560
+---
+- Wed
+- Off
+- –
+- –
+- 0
+---
+- Thu
+- MD-2
+- 70 min
+- 6
+- 420
+---
+- Fri
+- MD-1
+- 45 min
+- 4
+- 180
+---
+- Sat
+- Off
+- –
+- –
+- 0
+---
+- Sun
+- Match
+- 95 min
+- 8
+- 760
+---
+- 
+- 
+- 
+- 
+- **2,370 AU**
+{% /table %}
+
+> **Acute Load (7 days) = 2,370 AU**
+
+### Step 2 – Use the Previous 21 Days for Chronic Load
+
+Assume the previous 21 days looked like this at the weekly-equivalent level:
+
+{% table %}
+- Past week (7-day blocks)
+- Weekly Total (AU)
+---
+- Week −3
+- 2,100
+---
+- Week −2
+- 2,250
+---
+- Week −1
+- 2,180
+{% /table %}
+
+These three 7-day blocks represent the **previous 21 days**.
+
+To put chronic on the same scale as acute (per 7 days), we can simply average the three weekly totals:
+
+> **Chronic (21-day average, per 7 days) = (2,100 + 2,250 + 2,180) ÷ 3**\
+= 6,530 ÷ 3 ≈ **2,177 AU**
+
+### Step 3 – Compute ACWR
+
+> **ACWR = Acute (7d) ÷ Chronic (21d avg per 7d)**\
+ACWR = 2,370 ÷ 2,177 ≈ **1.09**
+
+Interpretation:
+
+- 1.09 is slightly above the player’s recent 21-day “fitness base” → **a normal, slightly progressive week**.
+- If next week jumped to 3,000 AU while chronic was still around 2,200 AU, ACWR would move towards **1.35+**, indicating a **noticeable spike**.
+
+**Coach Takeaway:**\
+The 7/21 model lets you see, **for each player**, whether this week’s load is **in line with the last three weeks**, not just with a single previous week.
+
+---
+
+## Common Mistakes and Limitations When Using ACWR
+
+Scientific papers have both supported and criticised ACWR. The key is to understand **what it can do and what it cannot do**.
+
+### Mistake 1 – Treating ACWR as an Injury Predictor
+
+ACWR is often misunderstood as “high ratio = injury, low ratio = safe”. In reality:
+
+- Injuries are **multifactorial**: strength, previous injury, sleep, stress, surfaces, tactical context, and more.
+- ACWR only tells you about **load exposure relative to recent conditioning**.
+
+**Better approach:**\
+Use ACWR as a **risk flag**, not as a yes/no decision-maker. When ACWR is high **and** wellness is poor **and** history is problematic, then the risk picture is stronger.
+
+**Coach Takeaway:**\
+ACWR is a **warning light**, not a crystal ball.
+
+---
+
+### Mistake 2 – Using Hard Thresholds Without Context
+
+Some early work proposed “safe zones” (e.g., 0.8–1.3) and “danger zones” (>1.5), but later reviews have highlighted:
+
+- Ratios are sensitive to both the acute and chronic parts.
+- No single threshold works for all squads, levels, or sports.
+- Interpretation must be **contextual**, not rigid.
+
+**Better approach:**
+
+- Use **bands** (e.g., around 1.0 = “similar”, clearly >1.2–1.3 = “spike”) as **soft guides**.
+- Combine them with **player history, wellness, and match exposure**.
+
+---
+
+### Mistake 3 – Poor Data Quality (RPE, Duration, Missing Days)
+
+ACWR is only as good as the **training load** you feed into it.
+
+Common issues:
+
+- RPE not collected regularly
+- Session durations not accurate
+- Missing data on intense days
+- Players not understanding the RPE scale
+
+**Better approach:**
+
+- Educate players on **RPE and why it matters**.
+- Make the questionnaire **fast and routine** (e.g., on their phone after training).
+- Use simple, consistent workflows – or a platform that removes friction.
+
+---
+
+### Mistake 4 – Ignoring Wellness and Pain
+
+You can have a “good” ACWR around 1.0 but still see:
+
+- Poor sleep
+- High fatigue
+- Low mood and high stress
+- Persistent muscle or joint pain
+
+Consensus statements strongly recommend combining **load monitoring** with **athlete well-being and health monitoring**.
+
+**Better approach:**
+
+- Track **wellness** (sleep, fatigue, soreness, stress, mood).
+- Track **pain locations and trends**.
+- Put ACWR values beside those indicators, not above them.
+
+For more on this, see:
+
+- 👉 [**Wellness Monitoring 101: Sleep, Fatigue, Soreness, Stress, and Mood Explained**](/blog/wellness-monitoring-team-sports)
+- 👉 [**Early Warning Signs of Overload and Injury Risk in Team Sports**](/blog/early-warning-signs-injury-risk)
+
+**Coach Takeaway:**\
+ACWR is most powerful when it **confirms what you already suspect** based on wellness, pain, and performance – or when it makes you ask better questions.
+
+---
+
+## How to Use ACWR Safely with a 7/21 Model
+
+Here’s a practical framework tailored to the **7-day acute / 21-day chronic** method used in Fractall.
+
+### 1. Build the Foundation: RPE + Session Load
+
+Before ratios:
+
+- Collect RPE + duration for each key session and match.
+- Calculate **session load** (RPE × minutes).
+- Get reliable **daily and weekly load** numbers.
+
+### 2. Implement the 7/21 ACWR in Simple Steps
+
+- **Acute (7d):** sum of the last 7 days of internal training load.
+- **Chronic (21d):** average of the last 21 days of internal training load (often expressed as a 7-day equivalent for easier reading).
+
+Update:
+
+- **Daily** (rolling 7/21 windows), or
+- **Once per week** (e.g., every Monday, looking back at the previous 7 and 21 days)
+
+### 3. Look for Meaningful Spikes and Drops
+
+Focus on:
+
+- ACWR clearly above **\~1.2–1.3**, especially when chronic load has been low.
+- Sudden jumps (e.g., 0.9 → 1.35) after holidays, breaks, or injuries.
+- ACWR <0.8 for extended periods, indicating **under-loading** relative to past levels.
+
+When you see a concerning spike:
+
+- Slightly reduce volume or intensity in 1–2 upcoming sessions.
+- Add more recovery strategies (e.g., sleep quality, nutrition, active recovery).
+- Monitor wellness more closely.
+
+### 4. Use ACWR for Return-to-Play Plans
+
+For players returning from injury:
+
+- Start with lower 7-day acute load and **build gradually**.
+- Monitor how the 7-day acute compares to the 21-day chronic; avoid huge leaps.
+- Combine with: strength testing, movement screens, and medical sign-off.
+
+**Coach Takeaway:**\
+With a 7/21 model, ACWR becomes a simple, continuous signal: **“Are we building up in a controlled way, or jumping too fast compared with the last three weeks?”**
+
+---
+
+## Expert Tips on Thresholds, Spikes, and Trends
+
+### Tip 1 – Use Bands, Not Lines in the Sand
+
+For practical coaching with 7/21 ACWR:
+
+- Around **0.8–1.2** → often a **stable or slightly progressive** range
+- Around **1.2–1.4** → a **spike zone** where extra attention is needed
+- Above **1.4–1.5** → a **large spike**, especially concerning if chronic load is low or wellness is poor
+
+These are **guidelines**, not rules. Your squad, level, and context matter.
+
+### Tip 2 – Flag High-Risk Profiles
+
+Be more conservative with:
+
+- Players with repeated soft-tissue injuries
+- Youth players in growth spurts
+- Players with low chronic load (e.g., late arrivals, long layoffs)
+- Players with high tactical demands (fullbacks, wingers) facing schedule congestion
+
+### Tip 3 – Stick to One Method
+
+There are many ways to compute ACWR (rolling averages, exponentially weighted models, different windows). Pick **one method** – in this case, 7-day acute and 21-day chronic – and apply it consistently so that:
+
+- Coaches and players understand what the numbers mean.
+- Trends over time are reliable.
+
+### Tip 4 – Youth Teams: Go Slower
+
+For youth squads:
+
+- Use ACWR to **avoid extremes**, not to micromanage.
+- Combine with strong emphasis on **sleep, growth, technique, and movement quality**.
+- Be especially cautious with spikes around tournaments, exams, and multi-team participation.
+
+**Coach Takeaway:**\
+The goal is not to chase the “perfect ACWR”, but to **reduce unnecessary risk from sudden, unplanned load spikes**, especially in vulnerable players.
+
+---
+
+## How Fractall Makes 7/21 ACWR Effortless
+
+To use a 7/21 ACWR model with a full squad, you need to:
+
+- Collect **RPE and wellness** data consistently
+- Compute daily load, 7-day acute, 21-day chronic load, and ACWR
+- Visualise **spikes, trends, and individual differences** clearly
+
+Doing this manually becomes a spreadsheet job that eats up hours every week.
+
+**Fractall** is built to solve exactly that for **small and medium clubs**:
+
+- **Accessible:** simple flows for players and coaches, no data-science degree required
+- **Insightful:** clear dashboards focused on decisions, not complexity
+- **Accurate:** consistent calculations of training load and ACWR using the **7-day / 21-day model**
+- **Optimized:** automation that lets you focus on coaching instead of chasing numbers
+
+With Fractall you can:
+
+- Collect RPE, wellness, and pain data quickly through athlete-friendly interfaces
+- Automatically calculate **daily load, 7-day acute load, 21-day chronic load, and ACWR**
+- See ACWR alongside **wellness, pain maps, monotony, and strain**, giving you a real-time snapshot of **load and risk** for each player
+
+👉 **Generate ACWR automatically — no spreadsheets needed. [Try Fractall free](https://app.fractall.fit/signup).**
+
+---
+
+## FAQs: ACWR Questions from Coaches
+
+### 1. What’s a safe ACWR range with a 7/21 model?
+
+There is no universal “safe” number, but in practice, many coaches treat:
+
+- **\~0.8–1.2** as a **normal or slightly progressive** zone
+- **\~1.2–1.4** as a **spike zone** where more attention is needed
+- **>1.4–1.5** as a **large spike**, especially concerning in players with low chronic load, poor wellness, or injury history
+
+Use these ranges as **conversation starters**, not strict rules.
+
+---
+
+### 2. Should youth teams use ACWR?
+
+Yes, but gently.
+
+- ACWR can help avoid **sudden jumps** in training + match load.
+- For youth, thresholds should be **softer** and interpreted with **maturation and total sport exposure** in mind.
+- The priority is **education and protection**, not numbers for their own sake.
+
+---
+
+### 3. What’s the difference between a 7/21 model and a “4-week model”?
+
+Traditionally, many ACWR implementations used:
+
+- **1-week acute**
+- **3–4 week (21–28 day) chronic**
+
+Fractall’s **7/21 model** fits this logic but expresses it clearly in **days**:
+
+- Acute = last 7 days
+- Chronic = last 21 days (three weeks)
+
+This allows you to compute ACWR **any day**, not just once per week, and keeps the concept aligned with **football microcycles**.
+
+---
+
+### 4. Do I need GPS data to use 7/21 ACWR?
+
+No. The 7/21 model works perfectly with **internal load** based on **RPE × duration**:
+
+- Easy to implement in small and medium clubs
+- Works across different sports and levels
+- Can later be combined with **external load** (GPS, tracking) as a second layer
+
+If you’re starting from zero, begin with **internal load**, then build up.
+
+---
+
+## Summary: Coach-Friendly Recap
+
+- **ACWR explained:** it compares **7-day acute load** with a **21-day chronic average** to show how much your latest week differs from the last three weeks.
+- ACWR helps you **spot spikes and drops** in training load that may influence **injury risk and performance**, especially when combined with **wellness and pain data**.
+- For small and medium clubs, the 7/21 model using internal load (RPE × duration) is **simple, realistic, and effective**.
+- ACWR must **not** be used as a stand-alone injury predictor; it is a **decision-support tool** that should be interpreted with context.
+- Tools like **Fractall** automate the 7/21 ACWR calculation, integrate it with wellness and pain, and free coaches to focus on **planning and on-field work**.
+
+**Coach Takeaway:**\
+You do not need GPS or a performance analyst to benefit from ACWR. With a **7-day acute / 21-day chronic** approach, simple RPE data and a consistent routine allow you to control **how fast you progress load**, reduce unnecessary spikes, and give players a better chance to stay healthy and perform.
+
+## 👉 **Generate ACWR automatically — no spreadsheets needed. [Try Fractall free](https://app.fractall.fit/signup).\
+
+\
+\
+\
+References**
+
+- Blanch P, Gabbett TJ. *Has the athlete trained enough to return to play safely? The acute:chronic workload ratio permits clinicians to quantify a player’s training load.* Br J Sports Med. 2016. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26701923/?utm_source=chatgpt.com)
+- Fuller CW et al. *Consensus statement on injury definitions and data collection procedures in studies of football (soccer) injuries.* Br J Sports Med. 2006. [PMC+1](https://pmc.ncbi.nlm.nih.gov/articles/PMC2491990/?utm_source=chatgpt.com)
+- Gabbett TJ. *The training–injury prevention paradox: should athletes be training smarter and harder?* Br J Sports Med. 2016. [British Journal of Sports Medicine](https://bjsm.bmj.com/content/50/5/273?utm_source=chatgpt.com)
+- Hulin BT et al. *The acute:chronic workload ratio predicts injury: high chronic workload may decrease injury risk in elite rugby league players.* Br J Sports Med. 2016. [PubMed+1](https://pubmed.ncbi.nlm.nih.gov/26511006/?utm_source=chatgpt.com)
+- IOC Medical Commission. *How much is too much? International Olympic Committee consensus statements on load in sport and risk of injury/illness.* Br J Sports Med. 2016. [repository.up.ac.za+3British Journal of Sports Medicine+3ResearchGate+3](https://bjsm.bmj.com/content/50/17/1030?utm_source=chatgpt.com)
+- Impellizzeri FM et al. *Acute:Chronic Workload Ratio: Conceptual Issues and Fundamental Pitfalls from a Statistician’s and Clinician’s Perspective.* Int J Sports Physiol Perform. 2020. [Human Kinetics Journals](https://journals.humankinetics.com/downloadpdf/journals/ijspp/15/6/article-p907.pdf?utm_source=chatgpt.com)
+- Maupin D et al. *The relationship between acute:chronic workload ratios and injury risk in team sports: a systematic review.* Open Access J Sports Med. 2020. [Dove Medical Press](https://www.dovepress.com/the-relationship-between-acute-chronic-workload-ratios-and-injury-risk-peer-reviewed-fulltext-article-OAJSM?utm_source=chatgpt.com)
+- Rico-González M et al. *Acute:chronic workload ratio and training monotony: limitations as injury risk predictors in team sports.* 2022. [IPSantarem Repository](https://repositorio.ipsantarem.pt/server/api/core/bitstreams/7da658ce-5099-487e-9e72-1fda9a559358/content?utm_source=chatgpt.com)
+- Soligard T et al. *How much is too much? Part 1: International Olympic Committee consensus statement on load in sport and risk of injury.* Br J Sports Med. 2016. [British Journal of Sports Medicine+2klokeavskade.no+2](https://bjsm.bmj.com/content/50/17/1030?utm_source=chatgpt.com)
+- Zouhal H et al. *Editorial: Acute:Chronic Workload Ratio: Is There Scientific Evidence?* Front Sports Act Living. 2021.
