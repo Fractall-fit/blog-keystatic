@@ -1,0 +1,128 @@
+---
+title: Intro
+emoji: ⛑️
+section: getting-started
+order: 1
+---
+# **Intro: Roles, Access, and Invites**
+
+This guide is mainly for performance staff working in a sports department: coaches, physicians, S&C coaches, analysts, and operations staff.
+
+## **1) The Platform Story (Why It Works This Way)**
+
+In high-performance sport, the same person can wear different hats across teams and contexts.
+
+You might be:
+
+- A coach for Team A
+- A physician supporting Team B
+- An admin helping set up your department
+
+The platform is built around that reality:
+
+- One person has one account.
+- That account can hold multiple roles.
+- Each role unlocks a specific workspace and responsibilities.
+
+This keeps access precise, while still allowing flexible staffing.
+
+## **2) The Three Main Roles**
+
+### **Admin**
+
+- Owns setup and governance for the club/department.
+- Manages teams, staff, athletes, and invite links.
+- Handles billing and subscription controls.
+
+### **Coach (includes physician, S&C, performance staff)**
+
+- Uses the coaching workspace to monitor athletes and performance signals.
+- Can be associated with one or multiple teams.
+- `professional_area`&nbsp;can capture specialization (for example, S&C or medical).
+- See [coach_guide]
+
+### **Athlete**
+
+- Uses the athlete app workspace to submit wellness and RPE.
+- Can be associated with one or multiple teams.
+- See [athlete_guide]
+
+## **3) Access Logic**
+
+When you sign in:
+
+1. The system confirms you are authenticated.
+1. It reads your roles from your user profile.
+1. It allows only the route family that matches your role:
+
+- `/admin`&nbsp;for admin-level access
+- `/coach`&nbsp;for&nbsp;`coach`
+- `/athlete`&nbsp;for&nbsp;`athlete`
+
+4. If you try a route outside your roles, you are redirected to&nbsp;`/unauthorized`.
+
+If you have multiple roles, landing at&nbsp;`/`&nbsp;sends you to your highest-priority role:
+
+1. `admin`
+1. `coach`
+1. `athlete`
+
+## **4) Invite Links: How People Enter the Right Workspace**
+
+Invite links are the core onboarding mechanism.
+
+Each invite link defines:
+
+- Role to grant (`coach`,&nbsp;`athlete`, or&nbsp;`admin`)
+- Team (required for coach/athlete links, optional for admins)
+- Expiration date (optional)
+- Max uses (optional)
+- Status (`active`,&nbsp;`expired`,&nbsp;`revoked`)
+
+**The link flow:**
+
+1. Admin creates invite link.
+1. Recipient opens&nbsp;`https://fractall.fit/invite/{id}`.
+1. System validates the link (active, not expired, uses available).
+1. Then one of these paths happens:
+
+- Already authenticated: user clicks Join, role is added directly.
+- Existing account but not authenticated: password verification is required, then role is added.
+- New account: user registers with email + password, gets confirmation email, then completes onboarding.
+
+After successful redemption:
+
+- Role is added to user profile.
+- Role-specific entity is initialized (`admins`,&nbsp;`coaches`, or&nbsp;`athletes`).
+- User is associated with the invite Team (if a coach or athlete).
+
+## **5) Team Assignment Behavior (Important for Staff)**
+
+If someone already has the role and redeems another invite for the same role:
+
+- Athlete: they are added to the invited.
+- Coach (incl. physician/S&C): they are added to the invited team.
+- Admin: duplicate role grants are blocked.
+
+This means invite links can be used both for:
+
+- First-time access
+- Expanding access to additional teams
+
+## **6) Quick Troubleshooting**
+
+“Access denied”:
+
+- Your account does not currently have the role for that workspace route.
+
+“Invite link invalid/expired/max uses reached”:
+
+- Ask admin to generate a new active link.
+
+“I joined but still can’t access expected area”:
+
+- Sign out/in once so the server re-evaluates session + roles.
+
+“I should be coach but don’t see coach area”:
+
+- Admin should confirm your user has&nbsp;`coach`&nbsp;in roles and a coach entity exists.
